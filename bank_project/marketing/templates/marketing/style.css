@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    background-color: #f7e5f1;
+}
+
+ul{
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+
+
+li{
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    color: #52626e;
+
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #52626e;
+    
+}
+.fort{
+    position: absolute;
+    margin-left: 200px;
+    color: black;
+    margin-top: 100px;
+}
+
+.fort:nth-child(1){
+    
+    color: black;
+    font-size: x-large;
+}
+.fort:nth-child(2){
+    
+    font-size: 40px;
+
+}
+
+.github_login{
+    position: absolute;
+    margin:2% 20% auto 30%;
+    text-align: center;
+}
+.github_login:nth-child(1){
+    position: relative;
+}
+iframe{
+    position: absolute; 
+    margin-left: 20%;
+    width: 50%;
+    padding: 10px;
+
+  
+}
+
+img{
+    
+height: auto;
+width: 400px;
+position: absolute;
+right: 10%;
+margin-top: 100px;
+}
+.photo{
+    position: relative;
+}
+
+#Hi{
+font-size: 40px;
+}
+
+#Name{
+    font-size: 60px;
+    color: rgb(34, 58, 194);
+}
+
+#Prof{
+    font-size: 100px;
+    color: rgb(153, 14, 14);
+}
+
+#Comp{
+    font-size: 60px;
+    color: rgb(34, 58, 194);
+}
+p{
+    margin: 15px;
+}
+.menu-bar{
+    margin-top: 20px;
+}
+
+a:hover{
+    background-color: rgb(113, 179, 179);
+    
+}
+a{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: solid 1px grey;
+    margin: 10px;
+}
+
+button{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(34, 194, 167);
+}

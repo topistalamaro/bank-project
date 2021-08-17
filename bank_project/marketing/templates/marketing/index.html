@@ -1,0 +1,53 @@
+{% extends "registration/header.html" %}
+{% load static %}
+    <h1>Bank Deposit prediction</h1>
+
+    {% block content %}
+    
+    
+
+    <form action="" method="POST">
+      {% csrf_token %} 
+      
+      <!-- <p>Customer Class:</p>
+      <p>Customer Number:</p>
+      <input type="text" name="age">
+      <br> -->
+
+      <p>Customer Class:</p>
+      <p>Age:</p>
+      <input type="text" name="age">
+      <br>
+
+      <p>Credit Default(0 or 1):</p>
+      <input type="text" name="default">
+      <br>
+
+      <p>Annual Balance:</p>
+      <input type="text" name="balance">
+      <br>
+
+      <p>Contact Duration:</p>
+      <input type="text" name="duration">
+      <br>
+
+      <p>Contacts Made:</p>
+      <input type="text" name="campaign">
+      <br>
+
+      <p>Days Passed:</p>
+      <input type="text" name="pdays">
+      <br>
+      
+      <p>previous Contact:</p>
+      <input type="text" name="previous">
+      <br>
+
+      <input type="submit" value='Get Predictions'>
+      
+    </form>
+    
+    <p></p>
+    {% endblock %}
+  <!-- </body> -->
+</html>

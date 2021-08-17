@@ -1,0 +1,42 @@
+{% extends "registration/header.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container pt-5">
+        <div class="row">
+
+        <h1>Prediction Results</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Age</th>
+                <th scope="col">Default</th>
+                <th scope="col">Balance</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Campaign</th>
+                <th scope="col">Pdays</th>
+                <th scope="col">Previous</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {%for data in cum%}
+                    <tr>
+                    <th scope="row"></th> 
+                    <td>{{ data.age }}</td>
+                    <td>{{ data.default }}</td>
+                    <td>{{ data.age }}</td>
+                    <td>{{ data.age }}</td>
+                    <td>{{ data.age }}</td>
+                    <td>{{ data.age }}</td>
+                    <td>{{ data.age }}</td>
+                    
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
