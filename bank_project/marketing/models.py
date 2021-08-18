@@ -9,8 +9,9 @@ class Customer(models.Model):
     campaign = models.IntegerField(max_length=30)
     pdays = models.IntegerField(max_length=30)
     previous = models.IntegerField(max_length=30)
+    y = models.IntegerField(max_length=30, default=0)
     def __str__(self):
-        return self.default
+        return self.y
 
     
   

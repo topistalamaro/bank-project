@@ -1,29 +1,26 @@
- {% load crispy_forms_tags %}
-{% load static %}
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-
-<div class="container pt-5">
-    <div class="row justify-content-md-center">
-        <div class="col-md-6">
-            <form action="" method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4" style="color: white;">Sign In Now</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group" id="signup-button">
-                <button class="btn btn-primary" >Sign In</button>
-            </div>
-            <div class="form-group">
-                
-            </div>
-            </form>
+<head>
+    <style>
+    body {
+        font-family: Arial;
+    }
+    input[type=submit]{
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    </style>
+    </head>
+        <h2>Please login</h2>
+    <form class="login" method="post">
+        <div>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Login"/>
         </div>
-    </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </form>
+    

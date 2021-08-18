@@ -1,10 +1,30 @@
-{% extends "registration/header.html" %}
-{% load static %}
+{% extends 'marketing/header.html' %}
+<div class="container">
+  <div class="row">
+      {% if device.is_xsmall or device.is_small %}
+          <div class="col-sm">
+              {# Rendered for x-small/small screen devices #}
+              <img src="images/myimage_sm.jpg" alt="Descriptive alt tag" />
+          </div>
+      {% elif device.is_medium %}
+          <div class="col-md">
+              {# Rendered for medium screen devices #}
+              <img src="images/myimage_md.jpg" alt="Descriptive alt tag" />
+          </div>
+      {% else %}
+          <div class="col-lg">
+              {# Rendered for large/xlarge screen devices #}
+              <img src="images/myimage_lg.jpg" alt="Descriptive alt tag" />
+          </div>
+      {% endif %}
+  </div>
+</div>
+
     <h1>Bank Deposit prediction</h1>
 
+
     {% block content %}
-    
-    
+  
 
     <form action="" method="POST">
       {% csrf_token %} 
