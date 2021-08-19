@@ -1,26 +1,33 @@
 <head>
     <style>
-    body {
-        font-family: Arial;
-    }
-    input[type=submit]{
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: grid;
+            place-items: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            background: linear-gradient(greenyellow, dodgerblue);
+            font-family: "Sansita Swashed", cursive;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
-    </head>
+</head>
+<form class="login" method="post">
+    <div>
         <h2>Please login</h2>
-    <form class="login" method="post">
-        <div>
-          {% csrf_token %}
-          {{ form.as_p }}
-          <input type="submit" value="Login"/>
-        </div>
-    </form>
-    
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login" />
+    </div>
+</form>

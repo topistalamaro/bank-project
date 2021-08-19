@@ -1,73 +1,86 @@
 {% extends 'marketing/header.html' %}
 <div class="container">
-  <div class="row">
-      {% if device.is_xsmall or device.is_small %}
-          <div class="col-sm">
-              {# Rendered for x-small/small screen devices #}
-              <img src="images/myimage_sm.jpg" alt="Descriptive alt tag" />
-          </div>
-      {% elif device.is_medium %}
-          <div class="col-md">
-              {# Rendered for medium screen devices #}
-              <img src="images/myimage_md.jpg" alt="Descriptive alt tag" />
-          </div>
-      {% else %}
-          <div class="col-lg">
-              {# Rendered for large/xlarge screen devices #}
-              <img src="images/myimage_lg.jpg" alt="Descriptive alt tag" />
-          </div>
-      {% endif %}
-  </div>
+    <div class="row">
+        {% if device.is_xsmall or device.is_small %}
+        <div class="col-sm">
+            {# Rendered for x-small/small screen devices #}
+            <img src="images/myimage_sm.jpg" alt="Descriptive alt tag" />
+        </div>
+        {% elif device.is_medium %}
+        <div class="col-md">
+            {# Rendered for medium screen devices #}
+            <img src="images/myimage_md.jpg" alt="Descriptive alt tag" />
+        </div>
+        {% else %}
+        <div class="col-lg">
+            {# Rendered for large/xlarge screen devices #}
+            <img src="images/myimage_lg.jpg" alt="Descriptive alt tag" />
+        </div>
+        {% endif %}
+    </div>
 </div>
 
-    <h1>Bank Deposit prediction</h1>
+<h1>Bank Deposit prediction</h1>
 
 
-    {% block content %}
-  
+{% block content %}
 
+<div class="form-container">
     <form action="" method="POST">
-      {% csrf_token %} 
-      
-      <!-- <p>Customer Class:</p>
-      <p>Customer Number:</p>
-      <input type="text" name="age">
-      <br> -->
+        {% csrf_token %}
 
-      <p>Customer Class:</p>
-      <p>Age:</p>
-      <input type="text" name="age">
-      <br>
+        <!-- <p>Customer Class:</p>
+            <p>Customer Number:</p>
+            <input type="text" name="age">
+            <br> -->
+        <div class="form-item">
+            <p>Age:</p>
+            <input type="text" name="age">
+            <br>
+        </div>
 
-      <p>Credit Default(0 or 1):</p>
-      <input type="text" name="default">
-      <br>
+        <div class="form-item">
+            <p>Credit Default (0 or 1):</p>
+            <input type="text" name="default">
+            <br>
+        </div>
 
-      <p>Annual Balance:</p>
-      <input type="text" name="balance">
-      <br>
+        <div class="form-item">
+            <p>Annual Balance:</p>
+            <input type="text" name="balance">
+            <br>
+        </div>
+        <div class="form-item">
+            <p>Contact Duration:</p>
+            <input type="text" name="duration">
+            <br>
+        </div>
+        <div class="form-item">
+            <p>Contacts Made:</p>
+            <input type="text" name="campaign">
+            <br>
+        </div>
 
-      <p>Contact Duration:</p>
-      <input type="text" name="duration">
-      <br>
+        <div class="form-item">
+            <p>Days Passed:</p>
+            <input type="text" name="pdays">
+            <br>
+        </div>
 
-      <p>Contacts Made:</p>
-      <input type="text" name="campaign">
-      <br>
+        <div class="form-item">
+            <p>previous Contact:</p>
+            <input type="text" name="previous">
+            <br>
+        </div>
 
-      <p>Days Passed:</p>
-      <input type="text" name="pdays">
-      <br>
-      
-      <p>previous Contact:</p>
-      <input type="text" name="previous">
-      <br>
-
-      <input type="submit" value='Get Predictions'>
-      
+        <div class="form-item">
+            <input type="submit" value='Get Predictions'>
+        </div>        
     </form>
-    
-    <p></p>
-    {% endblock %}
-  <!-- </body> -->
+</div>
+
+<p></p>
+{% endblock %}
+<!-- </body> -->
+
 </html>
